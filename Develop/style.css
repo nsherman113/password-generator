@@ -34,7 +34,7 @@ header {
 
 .card {
   background-color: hsl(27, 100%, 59%);
-  border-radius: 5px;
+  border-radius: 10px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
@@ -78,6 +78,7 @@ header {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
+  border-radius: 10px;
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
@@ -90,12 +91,14 @@ header {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color: beige;
+  
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
+  
   width: 80%; /* Could be more or less, depending on screen size */
-}
+} 
 
 /* The Close Button */
 .close {
@@ -107,6 +110,7 @@ header {
 /* Modal Header */
 .modal-header {
   padding: 2px 16px;
+  
   background-color: hsl(27, 100%, 59%);
   color: beige;
 }
@@ -119,19 +123,20 @@ header {
   padding: 2px 16px;
   background-color: hsl(27, 100%, 59%);
   color: beige;
-}
+} 
 
 /* Modal Content */
 .modal-content {
   position: relative;
   background-color: #fefefe;
+
   padding: 0;
   border: 1px solid #888;
-  width: 80%;
+  width: 50%;
   height: auto;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
 }
 
 /* Add Animation */
@@ -161,6 +166,7 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+  font-family: 'Teko', sans-serif;
 }
 .btn:hover {
     opacity: 0.8;

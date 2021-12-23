@@ -7,7 +7,10 @@
 // Elements 
 const generateBtn = document.querySelector("#generate");
 const inputBtn = document.querySelector("#criteria");
+const cancelBtn1 = document.querySelector("#cancel1")
+const nextBtn1 = document.querySelector("#next1")
 const inputModal = document.getElementById("myModal")
+const passwordModalTxt = document.getElementById("passwordtxt")
 const span = document.getElementsByClassName("close")[0];
 
 // Input modal 
@@ -15,6 +18,10 @@ const span = document.getElementsByClassName("close")[0];
 
 inputBtn.onclick = function() {
   inputModal.style.display = "block";
+}
+cancelBtn1.onclick = function() {
+    inputModal.style.display = "none";
+    passwordModalTxt.value ='';
 }
 
 span.onclick = function() {
