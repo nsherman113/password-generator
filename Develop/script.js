@@ -4,9 +4,29 @@
 // I WANT to randomly generate a password that meets certain criteria
 // SO THAT I can create a strong password that provides greater security
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+// Elements 
+const generateBtn = document.querySelector("#generate");
+const inputBtn = document.querySelector("#criteria");
+const inputModal = document.getElementById("myModal")
+const span = document.getElementsByClassName("close")[0];
 
+// Input modal 
+
+
+inputBtn.onclick = function() {
+  inputModal.style.display = "block";
+}
+
+span.onclick = function() {
+    inputModal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == inputModal) {
+      inputModal.style.display = "none";
+    }
+}
+// inputCriteria();
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -18,3 +38,5 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
