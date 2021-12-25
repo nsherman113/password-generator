@@ -46,6 +46,8 @@ nextBtn1.onclick = function() {
 window.onclick = function(event) {
     if (event.target == inputModal) {
       inputModal.style.display = "none";
+    } else if (event.target == inputModal2) {
+      inputModal2.style.display = "none";
     }
 }
 // inputCriteria();
