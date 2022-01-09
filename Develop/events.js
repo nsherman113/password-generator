@@ -1,11 +1,6 @@
-// Assignment code here
-// --------------------------------------------
-// AS AN employee with access to sensitive data
-// I WANT to randomly generate a password that meets certain criteria
-// SO THAT I can create a strong password that provides greater security
 
 // Elements 
-const generateBtn = document.querySelector("#generate");
+const generateBtn = document.querySelector("#finish");
 const inputBtn = document.querySelector("#criteria");
 const cancelBtn1 = document.querySelector("#cancel1")
 const cancelBtn2 = document.querySelector("#cancel2")
@@ -19,9 +14,11 @@ const passwordModalTxt2 = document.getElementById("passwordtxt2")
 const passwordModalTxt3 = document.getElementById("passwordtxt3")
 const span = document.getElementsByClassName("close")[0];
 
+
+
 // Input modal 
 
-// Modal Click Events 
+// ------------------- CLICK EVENTS START -------------------- 
 inputBtn.onclick = function() {
   inputModal.style.display = "block";
 }
@@ -48,11 +45,14 @@ span.onclick = function() {
 nextBtn1.onclick = function() {
   inputModal.style.display = "none";
   inputModal2.style.display = "block";
+  
+  // passwordModalTxt2.value ='';
 }
 
 nextBtn2.onclick = function() {
   inputModal2.style.display = "none";
   inputModal3.style.display = "block";
+  passwordModalTxt3.value ='';
 } 
 
 window.onclick = function(event) {
@@ -62,17 +62,9 @@ window.onclick = function(event) {
       inputModal2.style.display = "none";
     }
 }
-// inputCriteria();
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
 
-}
+// ------------------- CLICK EVENTS END --------------------
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
+// ------------------ LOGIC --------------------
 

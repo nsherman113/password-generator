@@ -119,7 +119,6 @@ header {
 /* Modal Header */
 .modal-header {
   padding: 2px 16px;
-  
   background-color: hsl(27, 100%, 59%);
   color: beige;
 }
@@ -138,7 +137,6 @@ header {
 .modal-content {
   position: relative;
   background-color: #fefefe;
-
   padding: 0;
   border: 1px solid #888;
   width: 50%;
@@ -159,6 +157,23 @@ header {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+.inputBtn {
+  border: none;
+  width: 60%;
+  background-color: beige;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(27, 100%, 59%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Teko', sans-serif;
 }
 
 .btn {
