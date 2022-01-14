@@ -1,3 +1,9 @@
+
+// Check password length 
+
+
+
+// Generate password 
 function generatePassword () {
     generateBtn.onclick = function () {
       inputModal3.style.display = "none";

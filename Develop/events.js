@@ -11,6 +11,7 @@ const inputModal = document.getElementById("myModal")
 const inputModal2 = document.getElementById("myModal2")
 const inputModal3 = document.getElementById("myModal3")
 const passwordModalTxt2 = document.getElementById("passwordtxt2")
+
 const passwordModalTxt3 = document.getElementById("passwordtxt3")
 const span = document.getElementsByClassName("close")[0];
 
@@ -35,8 +36,9 @@ cancelBtn2.onclick = function() {
 }
 cancelBtn3.onclick = function () {
   inputModal3.style.display = "none";
-
+  passwordModalTxt2.value ='';
   passwordModalTxt3.value ='';
+  
 }
 
 span.onclick = function() {
@@ -49,11 +51,19 @@ nextBtn1.onclick = function() {
   // passwordModalTxt2.value ='';
 }
 
+
+
+
+
 nextBtn2.onclick = function() {
-  inputModal2.style.display = "none";
-  inputModal3.style.display = "block";
-  passwordModalTxt3.value ='';
-} 
+  if (passwordModalTxt2.value <= 5) {
+    console.log("Password does not meet required criteria, please input a valid number!");
+} else {inputModal2.style.display = "none"; inputModal3.style.display = "block";}
+}
+ 
+
+
+
 
 window.onclick = function(event) {
     if (event.target == inputModal) {
