@@ -7,11 +7,12 @@ const cancelBtn2 = document.querySelector("#cancel2")
 const cancelBtn3 = document.querySelector("#cancel3")
 const nextBtn1 = document.querySelector("#next1")
 const nextBtn2 = document.querySelector("#next2")
+const errorCancelBtn = document.querySelector("#error1Btn");
 const inputModal = document.getElementById("myModal")
 const inputModal2 = document.getElementById("myModal2")
 const inputModal3 = document.getElementById("myModal3")
+const errorModal1 = document.getElementById("error1");
 const passwordModalTxt2 = document.getElementById("passwordtxt2")
-
 const passwordModalTxt3 = document.getElementById("passwordtxt3")
 const span = document.getElementsByClassName("close")[0];
 
@@ -56,9 +57,11 @@ nextBtn1.onclick = function() {
 
 
 nextBtn2.onclick = function() {
-  if (passwordModalTxt2.value <= 5) {
+  if  (passwordModalTxt2.value <= 8 || passwordModalTxt2.value >= 128) {
+    // Create function that displays window, then call it here in lieu of console log 
+    displayError ()
     console.log("Password does not meet required criteria, please input a valid number!");
-} else {inputModal2.style.display = "none"; inputModal3.style.display = "block";}
+  } else {inputModal2.style.display = "none"; inputModal3.style.display = "block";}
 }
  
 

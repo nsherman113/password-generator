@@ -16,11 +16,9 @@
   /* Modal Content/Box */
   .modal-content {
     background-color: beige;
-    
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    
     width: 80%; /* Could be more or less, depending on screen size */
   } 
   
@@ -34,7 +32,6 @@
   /* Modal Header */
   .modal-header {
     padding: 2px 16px;
-    
     background-color: hsl(27, 100%, 59%);
     color: beige;
   }
@@ -53,7 +50,6 @@
   .modal-content {
     position: relative;
     background-color: #fefefe;
-  
     padding: 0;
     border: 1px solid #888;
     width: 50%;

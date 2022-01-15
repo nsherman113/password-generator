@@ -1,6 +1,12 @@
 
 // Check password length 
-
+function displayError () {
+    errorModal1.style.display = "block"; 
+    errorCancelBtn.onclick = function () {
+        errorModal1.style.display = "none";
+        passwordModalTxt2.value = "";
+    }
+}
 
 
 // Generate password 
@@ -28,7 +34,7 @@ function displayPassword () {
         <textarea
           readonly
           id="password"
-          placeholder=""
+          placeholder="" // <----- insert template literal here to replace with generated password 
           aria-label="Generated Password"
         ></textarea>
       </div>
@@ -39,4 +45,4 @@ function displayPassword () {
       </div>
     </div>
   </div>`
-}
+} 
