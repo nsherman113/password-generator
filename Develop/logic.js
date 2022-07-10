@@ -8,6 +8,18 @@ function displayError () {
     }
 }
 
+// Add length
+
+
+
+// Randomize password
+function randomizePassword () {
+
+}
+
+
+
+
 
 // Generate password 
 function generatePassword () {
@@ -17,8 +29,9 @@ function generatePassword () {
       console.log('WHATS GOOOOOD');
     }
 }
-generatePassword()
 
+
+// Display password
 function displayPassword () {
 
 

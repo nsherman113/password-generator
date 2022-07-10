@@ -1,0 +1,7 @@
+List of remaining items: 
+
+NOTE: This is a general approach to what logic is needed to complete the application. It may take more functions or steps, however generally the below list is what completes all components. 
+
+- Create function / variable to store password length value. 
+- Create funciton to store numeric and/or special character based upon both boolean values
+- Create function to randomize password, based upon length, numeric and/or special character, and that adds both an upper and lower case letter to the password. 

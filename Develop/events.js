@@ -57,11 +57,14 @@ nextBtn1.onclick = function() {
 
 
 nextBtn2.onclick = function() {
-  if  (passwordModalTxt2.value <= 8 || passwordModalTxt2.value >= 128) {
+ 
+   let passLength = 0;
+  if  (passwordModalTxt2.value < 8 || passwordModalTxt2.value >= 128) {
     // Create function that displays window, then call it here in lieu of console log 
     displayError ()
     console.log("Password does not meet required criteria, please input a valid number!");
-  } else {inputModal2.style.display = "none"; inputModal3.style.display = "block";}
+  } else {inputModal2.style.display = "none";  passwordModalTxt2.style.display = "none"; inputModal3.style.display = "block";}
+
 }
  
 
