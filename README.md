@@ -25,7 +25,8 @@ THEN I choose lowercase, uppercase, numeric, and/or special characters
 <!-- Step 5  -->
 WHEN I answer each prompt
 THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
+WHEN all prompts are answered.
+
 <!-- Step 6 -->
 THEN a password is generated that matches the selected criteria
 WHEN the password is generated

@@ -1,4 +1,6 @@
 
+
+
 // Check password length 
 function displayError () {
     errorModal1.style.display = "block"; 
@@ -9,6 +11,12 @@ function displayError () {
 }
 
 // Add length
+function addPasswordLength(a) {
+  let sum = a + 0;
+  return lengthArray.push(sum)
+};
+
+// console.log(lengthArray);
 
 
 
