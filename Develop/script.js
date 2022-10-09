@@ -18,9 +18,7 @@ const span = document.getElementsByClassName("close")[0];
 const lengthArray = [];
 
 
-// Input modal 
 
-// ------------------- CLICK EVENTS START -------------------- 
 inputBtn.onclick = function() {
   inputModal.style.display = "block";
 }
@@ -51,13 +49,6 @@ nextBtn1.onclick = function() {
 }
 
 
-// Add length
-function addPasswordLength(a) {
-  let sum = a + 0;
-  return sum;
-};
-console.log(addPasswordLength(5));
-
 nextBtn2.onclick = function () {
   if  (passwordModalTxt2.value < 8 || passwordModalTxt2.value >= 128) {
     // Create function that displays window, then call it here in lieu of console log 
@@ -77,11 +68,7 @@ let passModalInput = () => {
 passwordModalTxt2.style.display = "none"; inputModal3.style.display = "block"; addPasswordLength(passLength);
 };
 
-
-
-
-
-
+// Function to close modal with outside click event
 window.onclick = function(e) {
     if (e.target == inputModal) {
       inputModal.style.display = "none";
@@ -91,7 +78,63 @@ window.onclick = function(e) {
 }
 
 
-// ------------------- CLICK EVENTS END --------------------
 
-// ------------------ LOGIC --------------------
+
+
+
+// ! FUNCTIONS / LOGIC
+
+// Check password length 
+function displayError () {
+  errorModal1.style.display = "block"; 
+  errorCancelBtn.onclick = function () {
+      errorModal1.style.display = "none";
+      passwordModalTxt2.value = "";
+  }
+}
+
+// Add length
+function addPasswordLength(a) {
+let sum = a + 0;
+return lengthArray.push(sum)
+};
+
+// Generate password 
+function generatePassword () {
+  generateBtn.onclick = function () {
+    inputModal3.style.display = "none";
+    passwordModalTxt3.value ='';
+    console.log('WHATS GOOOOOD');
+  }
+}
+
+
+// Display password
+function displayPassword () {
+
+
+`<div class="wrapper">
+  <header>
+    <h1>Password Generator</h1>
+  </header>
+  <div class="card">
+    <div class="card-header">
+      <h2>Generate a Password</h2>
+    </div>
+    <div class="card-body">
+      <textarea
+        readonly
+        id="password"
+        placeholder="" // <----- insert template literal here to replace with generated password 
+        aria-label="Generated Password"
+      ></textarea>
+    </div>
+    <div class="card-footer">
+      <button id="criteria" class="inputBtn">Input Criteria</button>
+      
+    
+    </div>
+  </div>
+</div>`
+} 
 
