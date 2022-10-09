@@ -62,18 +62,21 @@ console.log(addPasswordLength(5));
 
 nextBtn2.onclick = function () {
  
-  let passLength = passwordModalTxt2.value;
+  
   if  (passwordModalTxt2.value < 8 || passwordModalTxt2.value >= 128) {
     // Create function that displays window, then call it here in lieu of console log 
     displayError ()
     console.log("Password does not meet required criteria, please input a valid number!");
-  } else {inputModal2.style.display = "none";  passwordModalTxt2.style.display = "none"; inputModal3.style.display = "block";}
+  } else {inputModal2.style.display = "none"; passModalInput(); }
  
 } 
 
 
-
-
+function passModalInput () {
+  let passLength = passwordModalTxt2.value;
+passwordModalTxt2.style.display = "none"; inputModal3.style.display = "block"; addPasswordLength(passLength);
+console.log(passLength);
+}
 
 
  
