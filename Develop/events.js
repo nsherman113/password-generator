@@ -48,8 +48,6 @@ span.onclick = function() {
 nextBtn1.onclick = function() {
   inputModal.style.display = "none";
   inputModal2.style.display = "block";
-  
-  // passwordModalTxt2.value ='';
 }
 
 
@@ -61,33 +59,33 @@ function addPasswordLength(a) {
 console.log(addPasswordLength(5));
 
 nextBtn2.onclick = function () {
- 
-  
   if  (passwordModalTxt2.value < 8 || passwordModalTxt2.value >= 128) {
     // Create function that displays window, then call it here in lieu of console log 
     displayError ()
     console.log("Password does not meet required criteria, please input a valid number!");
-  } else {inputModal2.style.display = "none"; passModalInput(); }
- 
+  } else if (isNaN(passwordModalTxt2.value)) {
+    displayError ()
+    console.log("Password does not meet required criteria, please input a valid number!");
+  } else {
+    inputModal2.style.display = "none"; passModalInput();
+  }
 } 
 
-
-function passModalInput () {
+// {inputModal2.style.display = "none"; passModalInput(); }
+let passModalInput = () => {
   let passLength = passwordModalTxt2.value;
 passwordModalTxt2.style.display = "none"; inputModal3.style.display = "block"; addPasswordLength(passLength);
-console.log(passLength);
-}
-
-
- 
+};
 
 
 
 
-window.onclick = function(event) {
-    if (event.target == inputModal) {
+
+
+window.onclick = function(e) {
+    if (e.target == inputModal) {
       inputModal.style.display = "none";
-    } else if (event.target == inputModal2) {
+    } else if (e.target == inputModal2) {
       inputModal2.style.display = "none";
     }
 }
