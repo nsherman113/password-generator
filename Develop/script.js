@@ -15,9 +15,24 @@ const errorModal1 = document.getElementById("error1");
 const passwordModalTxt2 = document.getElementById("passwordtxt2")
 const passwordModalTxt3 = document.getElementById("passwordtxt3")
 const span = document.getElementsByClassName("close")[0];
-const lengthArray = [];
 
+const allCapLetters = [
+  'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+]; 
+const allLowLetters = [
+  'abcdefghijklmnopqrstuvwxyz'
+];
+const allNumbers = [
+  '0123456789'
+]
+const allSpecialCharacters = [
+  '!@#$%^&*()_+={[}]:;<,>.?/'
+];
 
+// For Loop to loop through each Array (conditional needed)
+for (let i = 0; i < allCapLetters.length && allLowLetters.length && allNumbers.length && allSpecialCharacters.length; i++) {
+  console.log(allCapLetters[i],allLowLetters[i], allNumbers[i], allSpecialCharacters[i]);
+}
 
 inputBtn.onclick = function() {
   inputModal.style.display = "block";
@@ -65,7 +80,7 @@ nextBtn2.onclick = function () {
 // {inputModal2.style.display = "none"; passModalInput(); }
 let passModalInput = () => {
   let passLength = passwordModalTxt2.value;
-passwordModalTxt2.style.display = "none"; inputModal3.style.display = "block"; addPasswordLength(passLength);
+passwordModalTxt2.style.display = "none"; inputModal3.style.display = "block";
 };
 
 // Function to close modal with outside click event
@@ -84,7 +99,7 @@ window.onclick = function(e) {
 
 // ! FUNCTIONS / LOGIC
 
-// Check password length 
+// Check password criteria 
 function displayError () {
   errorModal1.style.display = "block"; 
   errorCancelBtn.onclick = function () {
@@ -94,10 +109,10 @@ function displayError () {
 }
 
 // Add length
-function addPasswordLength(a) {
-let sum = a + 0;
-return lengthArray.push(sum)
-};
+// function addPasswordLength(a) {
+// let sum = a + 0;
+// return lengthArray.push(sum)
+// };
 
 // Generate password 
 function generatePassword () {
