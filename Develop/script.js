@@ -73,15 +73,16 @@ nextBtn2.onclick = function () {
     displayError ()
     console.log("Password does not meet required criteria, please input a valid number!");
   } else {
-    inputModal2.style.display = "none"; passModalInput();
+    inputModal2.style.display = "none"; passModalInput(); 
   }
-} 
+  
+};
 
-// {inputModal2.style.display = "none"; passModalInput(); }
 let passModalInput = () => {
   let passLength = passwordModalTxt2.value;
 passwordModalTxt2.style.display = "none"; inputModal3.style.display = "block";
 };
+
 
 // Function to close modal with outside click event
 window.onclick = function(e) {
