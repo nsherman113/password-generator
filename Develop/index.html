@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
+    <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="modal2.css" />
     <link rel="stylesheet" href="modal3.css" />
@@ -56,12 +57,8 @@
     <div class="modal-footer">
       <button id="cancel1" class="btn">Cancel</button>
       <button id="next1" class="btn">Next</button>
-      
-      
     </div>
   </div>
-
-  
 
 </div>
 <div id="myModal2" class="modal2">
@@ -97,29 +94,30 @@
       <h2>Character Types</h2>
     </div>
     <div class="modal-body">
-      <p class='password-criteria-p'> Please select each character type that you would like to include in your password: 
+      <p class='password-criteria-p'> You have the option to select a special character, a number, or both in your password. Please select an option:
         <br>  </p>
 
         <!-- Checkbox 1 -->
     <div class = "chartype-checkmarks"> 
-      <input type='checkbox' class ='pass-input3' id='passwordtxt3'>
-      <span>Numeric</span>
-    </div>
+    <select name="cars" id="cars">
+        <option value="number" class ='pass-input3' id='passwordtxt3'>Number</option>
+        <option value="symbol" class ='pass-input4' id='passwordtxt3'>Symbol</option>
+        <option value="both" class ='pass-input4' id='passwordtxt3'>Both</option>
+  
+      </select>
+      <!-- <input type='checkbox' class ='pass-input3' id='passwordtxt3'>
+      <span> Number </span>
+    </div> -->
     <!-- Checkbox 2 -->
-    <div class = "chartype-checkmarks"> 
+    <!-- <div class = "chartype-checkmarks"> 
       <input type='checkbox' class ='pass-input4' id='passwordtxt3' for="Special Character (optional)">
-     <span> Special Character</span>
-    </div>
+     <span>Symbol</span>
+    </div> -->
     <!-- Checkbox 3 -->
-    <div class = "chartype-checkmarks"> 
+    <!-- <div class = "chartype-checkmarks"> 
       <input type='checkbox' class ='pass-input4' id='passwordtxt3' for="Special Character (optional)">
-     <span> Uppercase letter</span>
-    </div>
-    <!-- Checkbox 4 -->
-    <div class = "chartype-checkmarks"> 
-      <input type='checkbox' class ='pass-input4' id='passwordtxt3' for="Special Character (optional)">
-     <span> Lowercase Letter</span>
-    </div>
+     <span>Both</span>
+    </div> -->
     </div>
     <div class="modal-footer">
       <button id="cancel3" class="btn">Cancel</button>
@@ -152,5 +150,6 @@
 
 
     <script src="script.js"></script>
+    <script src="scrap.js"></script>
   </body>
 </html>
