@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="error1.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <!-- Password Display Box -->
+    <div class="wrapper" >
       <header>
         <h1>Password Generator</h1>
       </header>
@@ -20,7 +21,7 @@
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
-        <div class="card-body">
+        <div class="card-body" id="pass-display">
           <textarea
             readonly
             id="password"
@@ -34,11 +35,11 @@
       </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modals -->
    
 <div id="myModal" class="modal">
 
-  <!-- Modal content -->
+  <!-- Modal 1 - Password Criteria -->
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">&times;</span>
@@ -46,8 +47,8 @@
     </div>
     <div class="modal-body">
       <p class='password-criteria-p'>Your password must:<br>
-         Include a lower, upper, numeric, and/or special character. <br>
-         Include at least one number or symbol (E.g.,!, "" , #, $, %, etc). <br>
+         Include an uppercase letter<br>
+         Include at least one number and special character (E.g.,!, "" , #, $, %, etc). <br>
          Contain at minimum 8 characters, and no more than 128 characters.<br>
       </p> 
       
@@ -61,7 +62,7 @@
 </div>
 <div id="myModal2" class="modal2">
 
-  <!-- Modal content -->
+  <!-- Modal 2 - Password Length -->
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">&times;</span>
@@ -74,56 +75,7 @@
     </div>
     <div class="modal-footer">
       <button id="cancel2" class="btn">Cancel</button>
-      <button id="next2" class="btn">Next</button>
-      
-      
-    </div>
-  </div>
-
-  
-
-</div>
-<div id="myModal3" class="modal3">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>Character Types</h2>
-    </div>
-    <div class="modal-body">
-      <p class='password-criteria-p'> You have the option to select a special character, a number, or both in your password. Please select an option:
-        <br>  </p>
-
-        <!-- Checkbox 1 -->
-    <div class = "chartype-checkmarks"> 
-      <input type="radio" name = 'pass-input3' value="Number"> Number<br>
-      <input type="radio" name= 'pass-input3' value="Symbol"> Symbol<br>
-      <input type="radio" name= 'pass-input3' value="Both"> Both <br>
-    <!-- <select name="cars" id="cars">
-     
-        <option value="number" class ='pass-input3' id='passwordtxt3'>Number</option>
-        <option value="symbol" class ='pass-input4' id='passwordtxt3'>Symbol</option>
-        <option value="both" class ='pass-input4' id='passwordtxt3'>Both</option>
-  
-      </select> -->
-      <!-- <input type='checkbox' class ='pass-input3' id='passwordtxt3'>
-      <span> Number </span>
-    </div> -->
-    <!-- Checkbox 2 -->
-    <!-- <div class = "chartype-checkmarks"> 
-      <input type='checkbox' class ='pass-input4' id='passwordtxt3' for="Special Character (optional)">
-     <span>Symbol</span>
-    </div> -->
-    <!-- Checkbox 3 -->
-    <!-- <div class = "chartype-checkmarks"> 
-      <input type='checkbox' class ='pass-input4' id='passwordtxt3' for="Special Character (optional)">
-     <span>Both</span>
-    </div> -->
-    </div>
-    <div class="modal-footer">
-      <button id="cancel3" class="btn">Cancel</button>
-      <button id="finish" class="btn">Generate Password</button>
+      <button id="next2" class="btn">Generate Password</button>
       
       
     </div>
@@ -133,7 +85,10 @@
 
 </div>
 
-<!-- Input Error Modal 1 -->
+
+
+
+<!-- Error Modal -->
 
 <div class ="error-modal1" id="error1">
   <div class = "modal-content"> 
@@ -142,7 +97,7 @@
     <h2>INPUT ERROR!</h2>
   </div>
   <div class="modal-body">
-    <p class='password-criteria-p'> Password does not meet required criteria - please input a valid number!</p>
+    <p class='password-criteria-p'> Password does not meet required length - please input a valid number!</p>
   </div>
   <div class="modal-footer">
     <button class="btn" id="error1Btn">OK</button>
@@ -150,8 +105,9 @@
 </div>
 </div>
 
-
-    <script src="script.js"></script>
-    <script src="scrap.js"></script>
+ <!-- Scripts  -->
+     <script src="script.js"></script>
+    <!-- <script src="scrap.js"></script>  -->
+    <script src="functions.js"></script>
   </body>
 </html>

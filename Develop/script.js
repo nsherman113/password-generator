@@ -1,6 +1,7 @@
 
 // Elements 
 const generateBtn = document.querySelector("#finish");
+const display = document.getElementById('password');
 const inputBtn = document.querySelector("#criteria");
 const cancelBtn1 = document.querySelector("#cancel1")
 const cancelBtn2 = document.querySelector("#cancel2")
@@ -8,14 +9,15 @@ const cancelBtn3 = document.querySelector("#cancel3")
 const nextBtn1 = document.querySelector("#next1")
 const nextBtn2 = document.querySelector("#next2")
 const errorCancelBtn = document.querySelector("#error1Btn");
-const inputModal = document.getElementById("myModal")
-const inputModal2 = document.getElementById("myModal2")
-const inputModal3 = document.getElementById("myModal3")
+const inputModal = document.querySelector("#myModal")
+const inputModal2 = document.querySelector("#myModal2")
+const inputModal3 = document.querySelector("myModal3")
 const errorModal1 = document.getElementById("error1");
 const passwordModalTxt2 = document.getElementById("passwordtxt2")
 const passwordModalTxt3 = document.getElementById("passwordtxt3")
 const span = document.getElementsByClassName("close")[0];
 
+// Charater Option Arrays
 const allCapLetters = [
   'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 ]; 
@@ -29,11 +31,10 @@ const allSpecialCharacters = [
   '!@#$%^&*()_+={[}]:;<,>.?/'
 ];
 
-// For Loop to loop through each Array (conditional needed)
-for (let i = 0; i < allCapLetters.length && allLowLetters.length && allNumbers.length && allSpecialCharacters.length; i++) {
-  console.log(allCapLetters[i],allLowLetters[i], allNumbers[i], allSpecialCharacters[i]);
-}
+const compiledArrays = [...allCapLetters,...allLowLetters,...allNumbers,...allSpecialCharacters].join('')
+console.log(compiledArrays);
 
+// Click Events
 inputBtn.onclick = function() {
   inputModal.style.display = "block";
 }
@@ -43,46 +44,38 @@ cancelBtn1.onclick = function() {
     
 }
 cancelBtn2.onclick = function() {
-
   inputModal2.style.display = "none";
-
   passwordModalTxt2.value ='';
 }
-cancelBtn3.onclick = function () {
-  inputModal3.style.display = "none";
-  passwordModalTxt2.value ='';
-  passwordModalTxt3.value ='';
-  
-}
+// cancelBtn3.onclick = function () {
+//   inputModal3.style.display = "none";
+//   passwordModalTxt2.value ='';
+// }
 
 span.onclick = function() {
     inputModal.style.display = "none";
+    inputModal2.style.display = "none";
 }
 nextBtn1.onclick = function() {
   inputModal.style.display = "none";
   inputModal2.style.display = "block";
 }
 
-
 nextBtn2.onclick = function () {
-  if  (passwordModalTxt2.value < 8 || passwordModalTxt2.value >= 128) {
+  let passwordLength = Number(passwordModalTxt2.value);
+  if  (passwordLength < 8 || passwordLength >= 128) {
     // Create function that displays window, then call it here in lieu of console log 
     displayError ()
     console.log("Password does not meet required criteria, please input a valid number!");
-  } else if (isNaN(passwordModalTxt2.value)) {
+  } else if (isNaN(passwordLength)) {
     displayError ()
     console.log("Password does not meet required criteria, please input a valid number!");
   } else {
-    inputModal2.style.display = "none"; passModalInput(); 
+    console.log(passwordLength);
+    inputModal2.style.display = "none"; display.placeholder = `${passwordGenerator(passwordLength)}`
   }
   
 };
-
-let passModalInput = () => {
-  let passLength = passwordModalTxt2.value;
-passwordModalTxt2.style.display = "none"; inputModal3.style.display = "block";
-};
-
 
 // Function to close modal with outside click event
 window.onclick = function(e) {
@@ -96,11 +89,9 @@ window.onclick = function(e) {
 
 
 
-
-
 // ! FUNCTIONS / LOGIC
 
-// Check password criteria 
+// Display Error Modal Function 
 function displayError () {
   errorModal1.style.display = "block"; 
   errorCancelBtn.onclick = function () {
@@ -109,48 +100,18 @@ function displayError () {
   }
 }
 
-// Add length
-// function addPasswordLength(a) {
-// let sum = a + 0;
-// return lengthArray.push(sum)
-// };
+// Password Generator Function 
+function passwordGenerator(length) {
+  const chars =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890123456789012345678901234567890123456789!@#$%&*()_-+=!@#$%&*()_-+=!@#$%&*()_-+=!@#$%&*()_-+=";
 
-// Generate password 
-function generatePassword () {
-  generateBtn.onclick = function () {
-    inputModal3.style.display = "none";
-    passwordModalTxt3.value ='';
-    console.log('WHATS GOOOOOD');
-  }
+  const password = [...Array(length)].reduce((accumulator, _element) => {
+    const randomIndex = Math.floor(Math.random() * chars.length);
+    return accumulator + chars[randomIndex];
+  }, "");
+  return password;
 }
+console.log(passwordGenerator())
 
 
-// Display password
-function displayPassword () {
-
-
-`<div class="wrapper">
-  <header>
-    <h1>Password Generator</h1>
-  </header>
-  <div class="card">
-    <div class="card-header">
-      <h2>Generate a Password</h2>
-    </div>
-    <div class="card-body">
-      <textarea
-        readonly
-        id="password"
-        placeholder="" // <----- insert template literal here to replace with generated password 
-        aria-label="Generated Password"
-      ></textarea>
-    </div>
-    <div class="card-footer">
-      <button id="criteria" class="inputBtn">Input Criteria</button>
-      
-    
-    </div>
-  </div>
-</div>`
-} 
 
