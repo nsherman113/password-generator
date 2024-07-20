@@ -1,5 +1,6 @@
-Items to complete program: 
+Items to complete program UPDATED:
 
-- How to use checkbox input to enable true value, that then triggers numeric, special, uppercase, and lower case characters based upon user input. 
-- How to store password length user input into variable, and generate the given number into password HTML field. 
-- Needs conditional that displays error if user does not select minimum required character types. 
+- Create additional modals to specify how many of each character the user would like in their password. 
+    - based upon this, a function will then need to be created to add the amount of characters (e.g., capital letter(s), lowercase letters(s), num, special) and compile into one password alltogether with the given limitations of 8-120 total characters
+
+
