@@ -19,7 +19,7 @@
       </header>
       <div class="card">
         <div class="card-header">
-          <h2>Generate a Password</h2>
+          <h2 class="header2">Generate a Password</h2>
         </div>
         <div class="card-body" id="pass-display">
           <textarea
@@ -28,9 +28,11 @@
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
+          <button id="copy" class="copyBtn" >Copy</button>
         </div>
         <div class="card-footer">
           <button id="criteria" class="inputBtn">Input Criteria</button>
+          <button id="criteria2" class="clearBtn">Clear</button>
         </div>
       </div>
     </div>
@@ -48,7 +50,7 @@
     <div class="modal-body">
       <p class='password-criteria-p'>Your password must:<br>
          Include an uppercase letter<br>
-         Include at least one number and special character (E.g.,!, "" , #, $, %, etc). <br>
+         Include at least one number and/or special character (E.g.,!, "" , #, $, %, etc). <br>
          Contain at minimum 8 characters, and no more than 128 characters.<br>
       </p> 
       
@@ -76,7 +78,6 @@
     <div class="modal-footer">
       <button id="cancel2" class="btn">Cancel</button>
       <button id="next2" class="btn">Generate Password</button>
-      
       
     </div>
   </div>

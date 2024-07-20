@@ -32,6 +32,9 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+.header2 {
+  text-align: center;
+}
 .card {
   background-color: hsl(27, 100%, 59%);
   border-radius: 10px;
@@ -46,9 +49,11 @@ header {
 
 .card-header::after {
   content: " ";
+  text-align: center;
+  margin: 0 auto;
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: #ebe9e7;
   height: 2px;
 }
 
@@ -57,8 +62,13 @@ header {
 }
 
 .card-footer {
-  text-align: center;
+width: 200px;
+margin: 0 auto;
+display: inline;
+
 }
+
+
 
 .card-footer::before {
   content: " ";
@@ -72,6 +82,26 @@ header {
   content: " ";
   display: block;
   clear: both;
+}
+
+.copyBtn {
+  display: none;
+  border: none;
+  width: 100px;
+  background-color: beige;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(27, 100%, 59%);
+  font-size: 24px;
+  line-height: 22px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Teko', sans-serif;
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
 }
 .password-criteria-p {
   font-size: 20px;
@@ -159,22 +189,38 @@ header {
 }
 .inputBtn {
   border: none;
-  width: 60%;
+  width: 200px;
   background-color: beige;
-  border-radius: 25px;
+  border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(27, 100%, 59%);
   display: inline-block;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 22px;
-  margin: 16px 16px 16px 20px;
+  margin: 25px 25px 25px 100px;
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
   font-family: 'Teko', sans-serif;
 }
-
+.clearBtn {
+  border: none;
+  width: 200px;
+  background-color: beige;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(27, 100%, 59%);
+  display: inline-block;
+  font-size: 24px;
+  line-height: 22px;
+  margin: 25px 25px 25px 100px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Teko', sans-serif;
+}
 .btn {
   border: none;
   background-color: beige;
