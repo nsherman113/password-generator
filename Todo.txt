@@ -1,6 +1,13 @@
-Items to complete program UPDATED:
 
-- Create additional modals to specify how many of each character the user would like in their password. 
-    - based upon this, a function will then need to be created to add the amount of characters (e.g., capital letter(s), lowercase letters(s), num, special) and compile into one password alltogether with the given limitations of 8-120 total characters
+Remaining task items (updated 08/03/2024):
+
+- Need to create a conditional based on checkbox input. Steps as follows:
+    1. The second modal appears with 4 options
+        a. uppercase
+        b. lowercase
+        c. number
+        d. special character 
+    2. If a, b or c are not selected, an error modal appears that states both are required to generate a password. All three must be selected. 
+    3. If d is selected, a special character is added to the password output. 
 
 
